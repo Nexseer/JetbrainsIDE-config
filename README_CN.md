@@ -50,25 +50,30 @@ Theme 和 Editor Color Scheme 是 IDE 中两个相关但不同的概念。它们
 
 - Editor Color Scheme（编辑器配色方案）主要关注代码编辑区域的颜色设置，定义了不同代码元素（如关键字、字符串、注释等）的颜色，它主要目的是提升编程的效率和舒适度，通过不同颜色的区分来帮助开发者更快地识别代码结构和元素。
 
-![](Pasted%20image%2020240913174634.png)
+![image](https://github.com/user-attachments/assets/b411864d-56fd-4287-8374-c38ca7016078)
+
 
 `Appearance -> Tree Views -> Show indent guides`
 
 启用这个选项后，你可以更容易地识别嵌套结构，特别是在查看复杂的项目时。
 
-![](Pasted%20image%2020240913183133.png)
+![image](https://github.com/user-attachments/assets/762de21e-7b8a-4973-bfa9-8f48f658ba04)
 
-![](Pasted%20image%2020240913183601.png)
+
+![image](https://github.com/user-attachments/assets/d522155a-9519-4e4c-a612-d6755339c94c)
+
 
 `Editor -> Font -> Cascadia Code NF` `Size -> 24.0`
 
-![](Pasted%20image%2020240913183435.png)
+![image](https://github.com/user-attachments/assets/d94de1a0-15b5-4b88-9afe-e850c1ee6b06)
+
 
 ## 2. 其他设置
 
 `Appearance & Behavior -> System Settings -> HTTP Proxy`
 
-![](Pasted%20image%2020240820162223.png)
+![image](https://github.com/user-attachments/assets/0a9f3ef1-73f8-4cda-bd55-a92f5537a9c3)
+
 
 `Editor -> General -> Auto import -> Add unambiguous import on the fly`
 
@@ -78,7 +83,8 @@ Theme 和 Editor Color Scheme 是 IDE 中两个相关但不同的概念。它们
 
 渲染出空白字符，你可以更好地控制代码的格式和可读性。
 
-![](Pasted%20image%2020240820193836.png)
+![image](https://github.com/user-attachments/assets/76a83b60-adc1-470c-87d6-f3c56b00125f)
+
 
 # 四、快捷键 ⌨️
 
