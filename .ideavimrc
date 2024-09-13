@@ -1,0 +1,130 @@
+Plug 'preservim/nerdtree'
+Plug 'tpope/surround'
+
+let mapleader = " "
+
+set which-key
+set notimeout
+set surround
+set wrap
+set easymotion
+set scrolloff=6
+set incsearch
+set hlsearch
+set ignorecase
+set clipboard=unnamedplus
+set clipboard+=ideaput
+set relativenumber
+set keep-english-in-normal
+
+nmap L <action>(NextTab)
+nmap H <action>(PreviousTab)
+nmap K <action>(ShowHoverInfo)
+
+nnoremap <C-S-d> :action ActivateDebugToolWindow<CR>
+nnoremap <C-S-p> :action ShowSettings<CR>
+nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
+nnoremap <C-w> :action CloseContent<CR>
+nnoremap <C-y> :action Editor Redo<CR>
+nnoremap <C-n> :action NewFile<CR>
+
+nnoremap <A-Down> :action MoveLineDown<CR>
+nnoremap <A-Up> :action MoveLineUp<CR>
+inoremap <A-Down> :action MoveLineDown<CR>
+inoremap <A-Up> :action MoveLineUp<CR>
+
+map <C-A-n> <Action>(Run)
+map <f11> <Action>(ToggleFullScreen)
+map <C-h> <Action>(SwitchLeft)
+map <C-l> <Action>(SwitchRight)
+map <C-k> <Action>(SwitchUp)
+map <C-j> <Action>(SwitchDown)
+
+nmap g[ <action>(GotoPreviousError)
+nmap g] <action>(GotoNextError)
+nmap gi <action>(GotoImplementation)
+nmap gd <action>(GotoDeclaration)
+
+let g:WhichKeyDesc_Code = "<leader>c Code"
+let g:WhichKeyDesc_Code_Format = "<leader>cf Format"
+nmap <leader>cf <action>(ReformatCode) \| <action>(OptimizeImports)
+let g:WhichKeyDesc_Code_Rename = "<leader>cr Rename"
+nmap <leader>cr <action>(RenameElement)
+
+let g:WhichKeyDesc_DeBug= "<leader>d Debug"
+let g:WhichKeyDesc_Debug_DeBug = "<leader>db Debug"
+nmap <leader>db <Action>(Debug)
+let g:WhichKeyDesc_Debug_StepInto = "<leader>di StepInto"
+nmap <leader>di <Action>(StepInto)
+let g:WhichKeyDesc_Debug_BreakPoint = "<leader>dp BreakPoint"
+nmap <leader>dp <Action>(ToggleLineBreakpoint)
+let g:WhichKeyDesc_Debug_StepOver = "<leader>do StepOver"
+nmap <leader>do <Action>(StepOver)
+let g:WhichKeyDesc_Debug_DebugResume = "<leader>dr DebugResume"
+nmap <leader>dr <Action>(Resume)
+let g:WhichKeyDesc_Debug_DebugStop = "<leader>ds DebugStop"
+nmap <leader>ds <Action>(Stop)
+let g:WhichKeyDescepOut = "<leader>du StepOut"
+nmap <leader>du <Action>(StepOut)
+let g:WhichKeyDesc_Debug_BreakPointView = "<leader>dv BreakPointView"
+nmap <leader>dv <Action>(ViewBreakpoints)
+
+let g:WhichKeyDesc_NERDTreeToggle = "<leader>e NERDTreeToggle"
+nmap <leader>e :NERDTreeToggle<CR>
+
+let g:WhichKeyDesc_File = "<leader>f File"
+let g:WhichKeyDesc_File_AceAction = "<leader>fa AceAction"
+nmap <leader>fa <action>(AceAction)
+let g:WhichKeyDesc_File_OpenFileOrFolder = "<leader>ff OpenFileOrFolder"
+nmap <leader>ff <action>(ShowFilePath)
+let g:WhichKeyDesc_File_AceLineAction = "<leader>fl AceLineAction"
+nmap <leader>fl <action>(AceLineAction)
+let g:WhichKeyDesc_Find_FindSymbol = "<leader>fo FindSymbol"
+nmap <leader>fo <action>(GotoSymbol)
+let g:WhichKeyDesc_File_RecentFiles = "<leader>fp RecentFiles"
+nmap <leader>fp <action>(RecentFiles)
+let g:WhichKeyDesc_File_QuickOpenFile = "<leader>fq QuickOpenFile"
+nmap <leader>fq <action>(GotoFile)
+let g:WhichKeyDesc_File_AceTargetAction = "<leader>fv AceTargetAction"
+nmap <leader>fv <action>(AceTargetAction)
+
+let g:WhichKeyDesc_Git = "<leader>g Git"
+let g:WhichKeyDesc_Git_GitBlame = "<leader>gb GitBlame"
+nmap <leader>gb <action>(Annotate)
+let g:WhichKeyDesc_Git_Diff = "<space>gd ToggleDiff"
+nmap <space>gd <action>(ShowDiff)
+let g:WhichKeyDesc_Git_ShowGitLog = "<leader>gg ShowGitLog"
+nmap <leader>gg :action ActivateVersionControlToolWindow<CR>
+let g:WhichKeyDesc_Git_Revert = "<space>gr RevertHunk"
+nmap <space>gr <action>(Rollback)
+let g:WhichKeyDesc_Git_Synchronize = "<leader>gs GitSynchronize"
+nmap <leader>gs <action>(Synchronize)
+let g:WhichKeyDesc_Git_PrevChange = "<space>g[ PrevGitChange"
+nmap <space>g[ <action>(VcsPreviousChange)
+let g:WhichKeyDesc_Git_NextChange = "<space>g] NextGitChange"
+nmap <space>g] <action>(VcsNextChange)
+
+let g:WhichKeyDesc_Panel = "<leader>p Panel"
+let g:WhichKeyDesc_Panel_ShowProblem = "<leader>pd ShowProblem"
+nmap <leader>pd :action ActivateProblemsViewToolWindow<CR>
+
+let g:WhichKeyDesc_Windows = "<leader>w Window"
+let g:WhichKeyDesc_Windows_CloseAllEditors = "<leader>wc Close all tabs"
+nmap <leader>wc <action>(CloseAllEditors)
+let g:WhichKeyDesc_Windows_CloseAllEditorsButActive = "<leader>wo Close other tabs"
+nmap <leader>wo :action CloseAllEditorsButActive<CR>
+let g:WhichKeyDesc_Windows_MoveTabLeft = "<leader>wh MoveTabLeft"
+nmap <leader>wh <action>(MoveTabLeft)
+let g:WhichKeyDesc_Windows_MoveTabDown = "<leader>wj MoveTabDown"
+nmap <leader>wj <action>(MoveTabDown)
+let g:WhichKeyDesc_Windows_MoveTabUp = "<leader>wk MoveTabUp"
+nmap <leader>wk <action>(MoveTabUp)
+let g:WhichKeyDesc_Windows_MoveTabRight = "<leader>wl MoveTabRight"
+nmap <leader>wl <action>(MoveTabRight)
+
+let g:WhichKeyDesc_Zip = "<leader>z Zip"
+let g:WhichKeyDesc_Zip_ZipAll = "<leader>zc CollapseAllRegions"
+nmap <leader>zc <action>(CollapseAllRegions)
+let g:WhichKeyDesc_Zip_unZipAll = "<leader>zo ExpandAllRegions"
+nmap <leader>zo <action>(ExpandAllRegions)
+
