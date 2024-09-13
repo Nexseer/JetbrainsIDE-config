@@ -50,25 +50,26 @@ Theme and Editor Color Scheme are two related but distinct concepts within an ID
 
 - `Editor Color Scheme` focuses specifically on the color settings of the code editor area. It defines the colors for different code elements (such as keywords, strings, comments, etc.), with the primary goal of enhancing programming efficiency and comfort. By using distinct colors, it helps developers quickly identify code structures and elements.
 
-![](Pasted%20image%2020240913174634.png)
+![image](https://github.com/user-attachments/assets/b411864d-56fd-4287-8374-c38ca7016078)
 
 `Appearance -> Tree Views -> Show indent guides`
 
 Enabling this option makes it easier to recognize nested structures, especially when working on complex projects.
 
-![](Pasted%20image%2020240913183133.png)
+![image](https://github.com/user-attachments/assets/762de21e-7b8a-4973-bfa9-8f48f658ba04)
 
-![](Pasted%20image%2020240913183601.png)
+
+![image](https://github.com/user-attachments/assets/d522155a-9519-4e4c-a612-d6755339c94c)
 
 `Editor -> Font -> Cascadia Code NF` `Size -> 24.0`
 
-![](Pasted%20image%2020240913183435.png)
+![image](https://github.com/user-attachments/assets/d94de1a0-15b5-4b88-9afe-e850c1ee6b06)
 
 ## 2. Other Settings
 
 `Appearance & Behavior -> System Settings -> HTTP Proxy`
 
-![](Pasted%20image%2020240820162223.png)
+![image](https://github.com/user-attachments/assets/0a9f3ef1-73f8-4cda-bd55-a92f5537a9c3)
 
 `Editor -> General -> Auto import -> Add unambiguous import on the fly`
 
@@ -78,7 +79,7 @@ Automatically adding explicit import statements helps resolve undefined or unimp
 
 Additionally, rendering blank characters improves control over code formatting and readability.
 
-![](Pasted%20image%2020240820193836.png)
+![image](https://github.com/user-attachments/assets/76a83b60-adc1-470c-87d6-f3c56b00125f)
 
 # IV. Shortcuts ⌨️
 
