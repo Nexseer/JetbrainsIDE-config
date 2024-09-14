@@ -52,28 +52,23 @@ Theme 和 Editor Color Scheme 是 IDE 中两个相关但不同的概念。它们
 
 ![image](https://github.com/user-attachments/assets/b411864d-56fd-4287-8374-c38ca7016078)
 
-
 `Appearance -> Tree Views -> Show indent guides`
 
 启用这个选项后，你可以更容易地识别嵌套结构，特别是在查看复杂的项目时。
 
 ![image](https://github.com/user-attachments/assets/762de21e-7b8a-4973-bfa9-8f48f658ba04)
 
-
 ![image](https://github.com/user-attachments/assets/d522155a-9519-4e4c-a612-d6755339c94c)
-
 
 `Editor -> Font -> Cascadia Code NF` `Size -> 24.0`
 
 ![image](https://github.com/user-attachments/assets/d94de1a0-15b5-4b88-9afe-e850c1ee6b06)
-
 
 ## 2. 其他设置
 
 `Appearance & Behavior -> System Settings -> HTTP Proxy`
 
 ![image](https://github.com/user-attachments/assets/0a9f3ef1-73f8-4cda-bd55-a92f5537a9c3)
-
 
 `Editor -> General -> Auto import -> Add unambiguous import on the fly`
 
@@ -84,7 +79,6 @@ Theme 和 Editor Color Scheme 是 IDE 中两个相关但不同的概念。它们
 渲染出空白字符，你可以更好地控制代码的格式和可读性。
 
 ![image](https://github.com/user-attachments/assets/76a83b60-adc1-470c-87d6-f3c56b00125f)
-
 
 # 四、快捷键 ⌨️
 
@@ -109,7 +103,7 @@ let mapleader = " "
 
 # 启用 which-key 功能
 set which-key
-# 禁用超时
+# 禁用超时，使得 Vim 不会因为等待太长时间而自动放弃组合键输入。这可以让用户在输入复杂快捷键时有更充裕的时间，不用担心超时
 set notimeout
 # 启用 surround 功能
 set surround
@@ -117,7 +111,7 @@ set surround
 set wrap
 # 启用 easymotion 功能
 set easymotion
-# 设置光标上下保持 6 行距离
+# 光标位置的上方和下方至少会有6行可见的缓冲区
 set scrolloff=6
 # 启用增量搜索
 set incsearch
@@ -127,65 +121,63 @@ set hlsearch
 set ignorecase
 # 设置系统剪贴板
 set clipboard=unnamedplus
-# 启用 IDEA 剪贴板
+# 将 JetBrains IDE 的剪贴板与 Vim 的剪贴板集成，使得剪切、复制和粘贴操作在两个环境中共享
 set clipboard+=ideaput
 # 显示相对行号
 set relativenumber
 # 在普通模式下保持英文输入法
 set keep-english-in-normal
 
-# 映射 L 为下一个标签页
+# 下一个标签页
 nmap L <action>(NextTab)
-# 映射 H 为上一个标签页
+# 上一个标签页
 nmap H <action>(PreviousTab)
-# 映射 K 为显示悬浮信息
+# 显示悬浮信息
 nmap K <action>(ShowHoverInfo)
 
-# 映射 Ctrl+Shift+D 为激活调试工具窗口
+# 显示调试工具窗口
 nnoremap <C-S-d> :action ActivateDebugToolWindow<CR>
-# 映射 Ctrl+Shift+P 为显示设置
+# 显示设置面板
 nnoremap <C-S-p> :action ShowSettings<CR>
-# 映射 Ctrl+T 为激活终端工具窗口
+# 显示终端窗口
 nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
-# 映射 Ctrl+W 为关闭当前内容
+# 为关闭当前内容
 nnoremap <C-w> :action CloseContent<CR>
-# 映射 Ctrl+Y 为重做
+# 重做
 nnoremap <C-y> :action Editor Redo<CR>
-# 映射 Ctrl+N 为新建文件
+# 新建文件
 nnoremap <C-n> :action NewFile<CR>
 
-# 映射 Alt+Down 为向下移动行
+# 向下移动行
 nnoremap <A-Down> :action MoveLineDown<CR>
-# 映射 Alt+Up 为向上移动行
+# 向上移动行
 nnoremap <A-Up> :action MoveLineUp<CR>
-# 在插入模式下映射 Alt+Down 为向下移动行
+# 向下移动行
 inoremap <A-Down> :action MoveLineDown<CR>
-# 在插入模式下映射 Alt+Up 为向上移动行
+# 向上移动行
 inoremap <A-Up> :action MoveLineUp<CR>
 
-# 映射 Ctrl+Alt+N 为运行
+# 运行
 map <C-A-n> <Action>(Run)
-# 映射 F11 为切换全屏
+# 切换全屏
 map <f11> <Action>(ToggleFullScreen)
-# 映射 Ctrl+H 为切换到左侧窗口
+# 切换到左侧窗口
 map <C-h> <Action>(SwitchLeft)
-# 映射 Ctrl+L 为切换到右侧窗口
+# 切换到右侧窗口
 map <C-l> <Action>(SwitchRight)
-# 映射 Ctrl+K 为切换到上方窗口
+# 切换到上方窗口
 map <C-k> <Action>(SwitchUp)
-# 映射 Ctrl+J 为切换到下方窗口
+# 切换到下方窗口
 map <C-j> <Action>(SwitchDown)
 
-# 映射 g[ 为跳转到上一个错误
+# 跳转到上一个错误
 nmap g[ <action>(GotoPreviousError)
-# 映射 g] 为跳转到下一个错误
+# 跳转到下一个错误
 nmap g] <action>(GotoNextError)
-# 映射 gi 为跳转到实现
+# 跳转到实现
 nmap gi <action>(GotoImplementation)
-# 映射 gd 为跳转到声明
+# 跳转到声明
 nmap gd <action>(GotoDeclaration)
-
-# 以下是 which-key 的描述设置和相应的快捷键映射
 
 # 代码相关操作
 let g:WhichKeyDesc_Code = "<leader>c Code"

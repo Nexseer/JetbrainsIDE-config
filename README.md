@@ -58,7 +58,6 @@ Enabling this option makes it easier to recognize nested structures, especially 
 
 ![image](https://github.com/user-attachments/assets/762de21e-7b8a-4973-bfa9-8f48f658ba04)
 
-
 ![image](https://github.com/user-attachments/assets/d522155a-9519-4e4c-a612-d6755339c94c)
 
 `Editor -> Font -> Cascadia Code NF` `Size -> 24.0`
@@ -104,7 +103,7 @@ let mapleader = " "
 
 # Enable which-key functionality
 set which-key
-# Disable timeout
+# Disable timeout, this prevents Vim from automatically aborting the input of a key combination after a long period of waiting. This gives the user more time to enter complex shortcut keys without worrying about timeouts.
 set notimeout
 # Enable surround functionality
 set surround
@@ -112,7 +111,7 @@ set surround
 set wrap
 # Enable easymotion functionality
 set easymotion
-# Set cursor to maintain 6 lines distance from top/bottom
+# There will be at least 6 lines of visible buffer above and below the cursor position
 set scrolloff=6
 # Enable incremental search
 set incsearch
@@ -122,65 +121,63 @@ set hlsearch
 set ignorecase
 # Set system clipboard
 set clipboard=unnamedplus
-# Enable IDEA clipboard
+# Integrating the JetBrains IDE clipboard with the Vim clipboard allows cut, copy and paste operations to be shared between the two environments
 set clipboard+=ideaput
 # Show relative line numbers
 set relativenumber
 # Keep English input method in normal mode
 set keep-english-in-normal
 
-# Map L to next tab
+# next tab
 nmap L <action>(NextTab)
-# Map H to previous tab
+# previous tab
 nmap H <action>(PreviousTab)
-# Map K to show hover info
+# show hover info
 nmap K <action>(ShowHoverInfo)
 
-# Map Ctrl+Shift+D to activate debug tool window
+# show debug tool window
 nnoremap <C-S-d> :action ActivateDebugToolWindow<CR>
-# Map Ctrl+Shift+P to show settings
+# show settings
 nnoremap <C-S-p> :action ShowSettings<CR>
-# Map Ctrl+T to activate terminal tool window
+# show terminal window
 nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
-# Map Ctrl+W to close current content
+# close current content
 nnoremap <C-w> :action CloseContent<CR>
-# Map Ctrl+Y to redo
+# redo
 nnoremap <C-y> :action Editor Redo<CR>
-# Map Ctrl+N to create new file
+# create new file
 nnoremap <C-n> :action NewFile<CR>
 
-# Map Alt+Down to move line down
+# move line down
 nnoremap <A-Down> :action MoveLineDown<CR>
-# Map Alt+Up to move line up
+# move line up
 nnoremap <A-Up> :action MoveLineUp<CR>
-# Map Alt+Down to move line down in insert mode
+# move line down in insert mode
 inoremap <A-Down> :action MoveLineDown<CR>
-# Map Alt+Up to move line up in insert mode
+# move line up in insert mode
 inoremap <A-Up> :action MoveLineUp<CR>
 
-# Map Ctrl+Alt+N to run
+# run
 map <C-A-n> <Action>(Run)
-# Map F11 to toggle full screen
+# toggle full screen
 map <f11> <Action>(ToggleFullScreen)
-# Map Ctrl+H to switch to left window
+# switch to left window
 map <C-h> <Action>(SwitchLeft)
-# Map Ctrl+L to switch to right window
+# switch to right window
 map <C-l> <Action>(SwitchRight)
-# Map Ctrl+K to switch to upper window
+# switch to upper window
 map <C-k> <Action>(SwitchUp)
-# Map Ctrl+J to switch to lower window
+# switch to lower window
 map <C-j> <Action>(SwitchDown)
 
-# Map g[ to go to previous error
+# go to previous error
 nmap g[ <action>(GotoPreviousError)
-# Map g] to go to next error
+# go to next error
 nmap g] <action>(GotoNextError)
-# Map gi to go to implementation
+# go to implementation
 nmap gi <action>(GotoImplementation)
-# Map gd to go to declaration
+# go to declaration
 nmap gd <action>(GotoDeclaration)
-
-# The following are which-key descriptions and corresponding shortcut mappings
 
 # Code related operations
 let g:WhichKeyDesc_Code = "<leader>c Code"
