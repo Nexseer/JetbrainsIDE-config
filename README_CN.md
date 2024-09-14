@@ -95,8 +95,8 @@ IdeaVim 支持许多 Vim 插件功能，可以尝试用 Vim 的习惯来提高�
 ```python
 # 加载 NERDTree 插件
 Plug 'preservim/nerdtree'
-# 加载 surround 插件
-Plug 'tpope/surround'
+# 加载 vim-commentary 插件
+Plug 'tpope/vim-commentary'
 
 # 设置 leader 键为空格
 let mapleader = " "
@@ -105,8 +105,8 @@ let mapleader = " "
 set which-key
 # 禁用超时，使得 Vim 不会因为等待太长时间而自动放弃组合键输入。这可以让用户在输入复杂快捷键时有更充裕的时间，不用担心超时
 set notimeout
-# 启用 surround 功能
-set surround
+# 启用 commentary 插件注释功能
+set commentary
 # 启用自动换行
 set wrap
 # 启用 easymotion 功能
@@ -143,8 +143,6 @@ nnoremap <C-S-p> :action ShowSettings<CR>
 nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
 # 为关闭当前内容
 nnoremap <C-w> :action CloseContent<CR>
-# 重做
-nnoremap <C-y> :action Editor Redo<CR>
 # 新建文件
 nnoremap <C-n> :action NewFile<CR>
 
@@ -161,14 +159,6 @@ inoremap <A-Up> :action MoveLineUp<CR>
 map <C-A-n> <Action>(Run)
 # 切换全屏
 map <f11> <Action>(ToggleFullScreen)
-# 切换到左侧窗口
-map <C-h> <Action>(SwitchLeft)
-# 切换到右侧窗口
-map <C-l> <Action>(SwitchRight)
-# 切换到上方窗口
-map <C-k> <Action>(SwitchUp)
-# 切换到下方窗口
-map <C-j> <Action>(SwitchDown)
 
 # 跳转到上一个错误
 nmap g[ <action>(GotoPreviousError)
@@ -272,3 +262,101 @@ nmap <leader>zo <action>(ExpandAllRegions)
 ```
 
 ## 2. 快捷键整理
+
+**标签页导航**
+
+| 快捷键 | 功能描述   |
+| ------ | ---------- |
+| `L`    | 下一个 Tab |
+| `H`    | 上一个 Tab |
+
+**搜索**
+
+| 快捷键         | 功能描述 |
+| -------------- | -------- |
+| `/` 或 `?`     | 搜索     |
+| `shift shift`  | 万能搜索 |
+| `ctrl shift r` | 万能替换 |
+
+**快速跳转**
+
+| 快捷键 | 功能描述                       |
+| ------ | ------------------------------ |
+| `g[`   | 跳转到上一个错误或警告         |
+| `g]`   | 跳转到下一个错误或警告         |
+| `gd`   | 跳转到变量、方法或类的声明位置 |
+| `gi`   | 跳转到当前接口或抽象类的实现处 |
+
+**注释**
+
+| 快捷键 | 功能描述       |
+| ------ | -------------- |
+| `gc`   | 可视模式下注释 |
+| `gcc`  | 普通模式下注释 |
+
+**代码操作**
+
+| 快捷键       | 功能描述             |
+| ------------ | -------------------- |
+| `<leader>cf` | 格式化代码和优化导入 |
+| `<leader>cr` | 重命名元素           |
+| `ctrl alt n` | 运行                 |
+| `ctrl r`     | 重做                 |
+
+**面板操作**
+
+| 快捷键         | 功能描述                     |
+| -------------- | ---------------------------- |
+| `ctrl t`       | 打开终端                     |
+| `ctrl w`       | 关闭面板                     |
+| `<leader> p d` | 显示问题面板（如错误和警告） |
+| `<leader> e`   | 切换文件资源管理器           |
+| `ctrl shift d` | 打开调试窗口                 |
+| `ctrl shift p` | 显示设置                     |
+
+**调试**
+
+| 快捷键       | 功能描述        |
+| ------------ | --------------- |
+| `<leader>db` | 调试            |
+| `<leader>di` | 进入            |
+| `<leader>dp` | 打断点/解除断点 |
+| `<leader>do` | 步过            |
+| `<leader>dr` | 恢复调试        |
+| `<leader>ds` | 停止调试        |
+| `<leader>du` | 步出            |
+| `<leader>dv` | 查看断点        |
+
+**文件操作**
+
+| 快捷键       | 功能描述             |
+| ------------ | -------------------- |
+| `<leader>fa` | 执行 AceAction       |
+| `<leader>ff` | 打开文件或文件夹     |
+| `<leader>fl` | 执行 AceLineAction   |
+| `<leader>fo` | 查找符号             |
+| `<leader>fp` | 最近文件             |
+| `<leader>fq` | 快速打开文件         |
+| `<leader>fv` | 执行 AceTargetAction |
+
+> `AceAction`：基本的字符跳转；
+> `AceLineAction`：行内跳转；
+> `AceTargetAction`：快速选中目标单词。
+
+**窗口操作**
+
+| 快捷键       | 功能描述       |
+| ------------ | -------------- |
+| `<leader>wc` | 关闭所有标签页 |
+| `<leader>wo` | 关闭其他标签页 |
+| `<leader>wh` | 向左分割面板   |
+| `<leader>wj` | 向下分割面板   |
+| `<leader>wk` | 向上分割面板   |
+| `<leader>wl` | 向右分割面板   |
+
+**代码折叠**
+
+| 快捷键       | 功能描述             |
+| ------------ | -------------------- |
+| `<leader>zo` | 展开所有代码折叠区域 |
+| `<leader>zc` | 折叠所有代码折叠区域 |

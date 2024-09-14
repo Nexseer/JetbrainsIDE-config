@@ -95,8 +95,8 @@ You can use commands like `nmap`, `vmap`, etc., to customize key mappings. Combi
 ```python
 # Load NERDTree plugin
 Plug 'preservim/nerdtree'
-# Load surround plugin
-Plug 'tpope/surround'
+# Load vim-commentary plugin
+Plug 'tpope/vim-commentary'
 
 # Set leader key to space
 let mapleader = " "
@@ -105,8 +105,8 @@ let mapleader = " "
 set which-key
 # Disable timeout, this prevents Vim from automatically aborting the input of a key combination after a long period of waiting. This gives the user more time to enter complex shortcut keys without worrying about timeouts.
 set notimeout
-# Enable surround functionality
-set surround
+# Enable the commentary plugin comment function
+set commentary
 # Enable word wrap
 set wrap
 # Enable easymotion functionality
@@ -143,8 +143,6 @@ nnoremap <C-S-p> :action ShowSettings<CR>
 nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
 # close current content
 nnoremap <C-w> :action CloseContent<CR>
-# redo
-nnoremap <C-y> :action Editor Redo<CR>
 # create new file
 nnoremap <C-n> :action NewFile<CR>
 
@@ -161,14 +159,6 @@ inoremap <A-Up> :action MoveLineUp<CR>
 map <C-A-n> <Action>(Run)
 # toggle full screen
 map <f11> <Action>(ToggleFullScreen)
-# switch to left window
-map <C-h> <Action>(SwitchLeft)
-# switch to right window
-map <C-l> <Action>(SwitchRight)
-# switch to upper window
-map <C-k> <Action>(SwitchUp)
-# switch to lower window
-map <C-j> <Action>(SwitchDown)
 
 # go to previous error
 nmap g[ <action>(GotoPreviousError)
@@ -273,4 +263,100 @@ nmap <leader>zo <action>(ExpandAllRegions)
 
 ## 2. Shortcut Organization
 
-You can organize and customize your shortcuts by mapping your frequently used Vim and IDE commands to improve workflow and efficiency.
+**Tab Navigation**
+
+| Shortcut | Description  |
+| -------- | ------------ |
+| `L`      | Next Tab     |
+| `H`      | Previous Tab |
+
+**Search**
+
+| Shortcut       | Description       |
+| -------------- | ----------------- |
+| `/` or `?`     | Search            |
+| `shift shift`  | Universal Search  |
+| `ctrl shift r` | Universal Replace |
+
+**Quick Navigation**
+
+| Shortcut | Description                                                         |
+| -------- | ------------------------------------------------------------------- |
+| `g[`     | Go to previous error or warning                                     |
+| `g]`     | Go to next error or warning                                         |
+| `gd`     | Go to the declaration of a variable, method, or class               |
+| `gi`     | Go to the implementation of the current interface or abstract class |
+
+**Commenting**
+
+| Shortcut | Description            |
+| -------- | ---------------------- |
+| `gc`     | Comment in visual mode |
+| `gcc`    | Comment in normal mode |
+
+**Code Operations**
+
+| Shortcut     | Description                      |
+| ------------ | -------------------------------- |
+| `<leader>cf` | Format code and optimize imports |
+| `<leader>cr` | Rename element                   |
+| `ctrl alt n` | Run                              |
+| `ctrl r`     | Redo                             |
+
+**Panel Operations**
+
+| Shortcut       | Description                                    |
+| -------------- | ---------------------------------------------- |
+| `ctrl t`       | Open terminal                                  |
+| `ctrl w`       | Close panel                                    |
+| `<leader> p d` | Show problem panel (e.g., errors and warnings) |
+| `<leader> e`   | Toggle file explorer                           |
+| `ctrl shift d` | Open debug window                              |
+| `ctrl shift p` | Show settings                                  |
+
+**Debugging**
+
+| Shortcut     | Description       |
+| ------------ | ----------------- |
+| `<leader>db` | Start debugging   |
+| `<leader>di` | Step into         |
+| `<leader>dp` | Toggle breakpoint |
+| `<leader>do` | Step over         |
+| `<leader>dr` | Resume debugging  |
+| `<leader>ds` | Stop debugging    |
+| `<leader>du` | Step out          |
+| `<leader>dv` | View breakpoints  |
+
+**File Operations**
+
+| Shortcut     | Description             |
+| ------------ | ----------------------- |
+| `<leader>fa` | Execute AceAction       |
+| `<leader>ff` | Open file or folder     |
+| `<leader>fl` | Execute AceLineAction   |
+| `<leader>fo` | Search for symbols      |
+| `<leader>fp` | Recently opened files   |
+| `<leader>fq` | Quick open file         |
+| `<leader>fv` | Execute AceTargetAction |
+
+> `AceAction`: Basic character jump;
+> `AceLineAction`: Inline jump;
+> `AceTargetAction`: Quick select target word.
+
+**Window Operations**
+
+| Shortcut     | Description              |
+| ------------ | ------------------------ |
+| `<leader>wc` | Close all tabs           |
+| `<leader>wo` | Close other tabs         |
+| `<leader>wh` | Split panel to the left  |
+| `<leader>wj` | Split panel downwards    |
+| `<leader>wk` | Split panel upwards      |
+| `<leader>wl` | Split panel to the right |
+
+**Code Folding**
+
+| Shortcut     | Description              |
+| ------------ | ------------------------ |
+| `<leader>zo` | Unfold all code sections |
+| `<leader>zc` | Fold all code sections   |
