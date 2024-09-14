@@ -1,11 +1,11 @@
 Plug 'preservim/nerdtree'
-Plug 'tpope/surround'
+Plug 'tpope/vim-commentary'  
 
 let mapleader = " "
 
 set which-key
 set notimeout
-set surround
+set commentary
 set wrap
 set easymotion
 set scrolloff=6
@@ -35,10 +35,6 @@ inoremap <A-Up> :action MoveLineUp<CR>
 
 map <C-A-n> <Action>(Run)
 map <f11> <Action>(ToggleFullScreen)
-map <C-h> <Action>(SwitchLeft)
-map <C-l> <Action>(SwitchRight)
-map <C-k> <Action>(SwitchUp)
-map <C-j> <Action>(SwitchDown)
 
 nmap g[ <action>(GotoPreviousError)
 nmap g] <action>(GotoNextError)
