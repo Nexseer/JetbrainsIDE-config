@@ -6,6 +6,15 @@
 
 ![android-studio](./imgs/android_studio.png)
 
+- [I. Brief Introduction 🔎](#i-brief-introduction-)
+- [II. Plugins 🔌](#ii-plugins-)
+- [III. Custom Configuration ☑️](#iii-custom-configuration-️)
+  - [1. Appearance](#1-appearance)
+  - [2. Other Settings](#2-other-settings)
+- [IV. Shortcuts ⌨️](#iv-shortcuts-️)
+  - [1. .ideavimrc](#1-ideavimrc)
+  - [2. Shortcut Organization](#2-shortcut-organization)
+
 > 🎯 The IDE (Integrated Development Environment) offers a comprehensive set of software development tools, including a code editor, compiler, debugger, and often includes code analysis tools, a graphical user interface (GUI) builder, and version control support. IDEs are typically language-specific or support a few languages with deep integration features like auto-completion, IntelliSense, syntax highlighting, code suggestions, and automatic refactoring. An IDE can manage the entire project lifecycle, from writing code to building, deploying, and debugging. Due to its extensive feature set, an IDE usually consumes more system resources, making startup and runtime slower.
 
 # I. Brief Introduction 🔎
